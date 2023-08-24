@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  background-color: #065e7c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+.logo {
+  margin: 1.5rem 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.8rem;
+
+  background-color: #f4fcff;
+  border-radius: 50%;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  margin: 1.5rem 2.5rem;
+}
+
+.imghead img {
+  object-fit: cover;
+  width: 100%;
+  margin: 0;
+  border: none;
+}
+
+button {
+  background-color: #065e7c;
+  color: #ffffff;
+  gap: 1rem;
+  border-radius: 50%;
+  padding: 1.2rem;
+  border: none;
+}
+.button {
+  padding-inline: 2rem;
+}
+
+h1 {
+  padding-inline: 2rem;
+  padding-top: 2rem;
+  font-size: 2.4rem;
+  padding-bottom: 0.5rem;
+}
+main {
+  max-width: 44rem;
+
+  margin: auto;
+}
+
+.p {
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+  padding-inline: 2rem;
+}
+
+.artigos {
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  max-width: 38.4rem;
+}
+
+.articles {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-areas: "img h3" "img p";
+  align-items: center;
+}
+.articles img {
+  grid-area: img;
+}
+footer {
+  background-color: #387e96;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.6rem;
+
+  width: 100vw;
+}
+h3 {
+  font-size: 1.8rem;
+}
+.articles p {
+  font-size: 1.4rem;
+}
+
+input {
+  width: 100%;
+
+  color: #ffffff;
+  padding: 1.4rem;
+  border-radius: 0.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.6rem;
+  border: none;
+}
+input::placeholder {
+  color: #ffffff;
+}
+
+@media (min-width: 700px) {
+  .maingrid {
+    display: grid;
+    grid-template-areas:
+      "A B"
+      "C B";
+    gap: 3.2rem;
+  }
+  .imghead {
+    grid-area: A;
+  }
+  .paragrafo {
+    grid-area: C;
+  }
+  .artigos {
+    grid-area: B;
+  }
+
+  main {
+    max-width: 144rem;
+    padding: 0 10rem;
+  }
+
+  .h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .p {
+    max-width: 98rem;
+    text-align: justify;
+  }
+
+  header {
+    margin-bottom: 4.4rem;
+  }
+
+  button + button {
+    margin-left: 1.2rem;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
